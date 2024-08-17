@@ -10,6 +10,19 @@ full_analysis_information = [
     {"Name": "Fred Kerley", "Time": 9.79, "Country": "United States", "Date": "June 24, 2022", "Location": "Eugene, Oregon, USA", "Wind Speed": +1.0, "Reaction Time": 0.129},
     {"Name": "Richard Thompson", "Time": 9.82, "Country": "Trinidad and Tobago", "Date": "August 4, 2014", "Location": "Port of Spain, Trinidad and Tobago", "Wind Speed": +1.1, "Reaction Time": 0.141}
 ]
+ 
+def extract_data(full_analysis_information, key):
+    extracted_list = []
+    for athlete in full_analysis_information:
+        extracted_list.append(athlete[key])
+        
+    return extracted_list
 
-# zaradi nekaterih težav pri razpakiranju podatkov smo že razpakiran slovar iz spleta vključili neposredno v naš projekt
-# s tem smo zagotovili, da so vsi potrebni podatki pravilno vključeni in pripravljeni za nadaljnjo analizo
+names = extract_data(full_analysis_information, "Name")
+time = extract_data(full_analysis_information, "Time")
+date = extract_data(full_analysis_information, "Date")
+wind_speed = extract_data(full_analysis_information, "Wind Speed")
+reaction_time = extract_data(full_analysis_information, "Reaction Time")
+
+# tukaj imamo točen slovar podatkov, ki smo ga uvozili iz spleta, 
+# ter funkcijo, ki slovar razpakira v ločene sezname
