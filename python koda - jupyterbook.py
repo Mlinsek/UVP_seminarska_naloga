@@ -130,7 +130,26 @@ table.auto_set_font_size(False)
 table.set_fontsize(10)
 ax.set_title('Ages of Athletes When They Set Their Records and Average Age', fontsize=12)
 
-plt.savefig('athlete_age_table_with_average.png', bbox_inches='tight', dpi=300)
-plt.savefig('age_table.png')
+#plt.savefig('athlete_age_table_with_average.png', bbox_inches='tight', dpi=300)
+#plt.savefig('age_table.png')
 
 #--------------------------------------------------------------------------------------------------------------------------
+
+names = [athlete["Name"] for athlete in full_analysis_information]
+reaction_times = [athlete["Reaction Time"] for athlete in full_analysis_information]
+average_reaction_time = sum(reaction_times) / len(reaction_times)
+
+plt.figure(figsize=(10, 6))
+plt.bar(names, reaction_times, color='skyblue', label='Reaction Time')
+plt.axhline(y=average_reaction_time, color='red', linestyle='--', label=f'Average Reaction Time: {average_reaction_time:.3f}s')
+
+plt.xlabel("Athletes")
+plt.ylabel("Reaction Time (seconds)")
+plt.title("Reaction Times of Top 10 Sprinters")
+plt.xticks(rotation=45, ha='right')
+plt.legend()
+plt.tight_layout()
+plt.savefig('reaction_times_with_average.png')
+
+#--------------------------------------------------------------------------------------------------------------------------
+
