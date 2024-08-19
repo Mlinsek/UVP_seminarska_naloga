@@ -55,12 +55,11 @@ def wind_speed_function(file):
     with open(file, 'r', encoding='utf-8') as file:
         html_content = file.read()
     
+    wind_speed = []
     soup = BeautifulSoup(html_content, 'html.parser')
     text = soup.get_text()
-    wind_speed_pattern = r'[\+\-][0-1]\.\d|[\+\-]2\.0'
+    wind_speed_pattern = r'[\+\-\u2212][0-1]\.\d|[\+\-\u2212]2\.0|0\.0'
     wind_speeds = re.findall(wind_speed_pattern, text)
-    data_frame_wind_speeds = pd.DataFrame(wind_speeds, columns=['Wind Speed'])
-    wind_speed = data_frame_wind_speeds['Wind Speed'].tolist()
     
     return wind_speed
 
