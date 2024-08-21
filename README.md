@@ -1,10 +1,7 @@
 # UVP_seminarska_naloga
-Repozitorij za shranjevanje datotek
-## Commits
-1. **HTML datoteki** (nalaganje podatkov)
-2. **File functions** in **file table** (pridobivanje podatkov)
-3. **File JupyterBook** (analiza in risanje grafov)
-4. **File JPG** (uvodna slika v .ipyng datoteki)
-5. **Moderacija JupyterBook** (dodajanje nove funkcije in plot)
-6. **Plots in JPG** (dadali smo vse generirane slike)
-7. **File Seminarska** (dodajanje datoteke, ki zaobjema vso vsebino seminarske) 
+
+## Namen seminarske naloge
+Namen seminarske naloge je pridobiti podatke iz HTML datoteke, jih obdelati s pomočjo določenih funkcij ter jih na koncu predstaviti v obliki PDF dokumenta. Cilj naloge je, da se naučimo, kako učinkovito izvesti ta proces in uporabiti znanje pridobljeno na predavanjih in vajah.
+
+## Vsebina seminarske naloge
+V seminarski nalogi bomo pregledali rezultate teka na 100 metrov ter podrobneje analizirali deset najboljših sprinterjev vseh časov. Podatke bomo med seboj primerjali in poskušali ugotoviti, kateri dejavniki so ključni za uspeh. Poseben poudarek bomo namenili analizi vpliva vetra in reakcijskega časa ter na koncu skušali povezati oba dejavnika z dejanskim doseženim časom.
